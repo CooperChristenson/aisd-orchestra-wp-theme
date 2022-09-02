@@ -42,7 +42,7 @@ add_action('wp_dashboard_setup', function() {
 		}
 
 		echo '<p>Welcome to the Allen ISD Orchestra WordPress Theme</p>
-			<p>Need help? Contact the development team at:<br/><a href="mailto:cooper.j.christenson@gmail.com">cooper.j.christenson@gmail.com</a></p>
+			<p>Need help? Contact the development team at:<br/><a href="mailto:cmailto:liturgy.regency.0l@icloud.com">Cooper Christenson</a></p>
 			
 			<p>Installed theme version: <i>'.$installed_version.'</i></p>
 			'.$message;
