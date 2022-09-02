@@ -17,14 +17,14 @@ add_action('wp_dashboard_setup', function() {
 	// Check if theme update is available
 	wp_add_dashboard_widget('custom_help_widget', 'Allen ISD Orchestra WordPress Theme', function() {
 		$installed_version = wp_get_theme()->get('Version');
-		$git_file = wp_remote_get('');
+		$git_file = wp_remote_get('https://api.github.com/repos/cooperchristenson/aisd-orchestra-wp-theme/releases/latest');
 		$git_file = wp_remote_retrieve_body($git_file);
 		$git_data = json_decode($git_file);
 		$latest_version	= $git_data->tag_name ?? '';
 
 		$message = '';
 		if(empty($latest_version)){
-			$message = '<p>Checking for updates failed.</p>';
+			$message = '<p>Checking for updates failed. Please visit <a href="https://github.com/CooperChristenson/aisd-orchestra-wp-theme/"> to manually check for updates.</p>';
 		}
 		else if($installed_version == $latest_version || $installed_version=='WR_Child'){
 			$message = '<p>You are on the <a href="https://github.com/oawest/wp-theme/releases/latest" target="_blank" title="'.$latest_version.'">latest version</a></p>';
