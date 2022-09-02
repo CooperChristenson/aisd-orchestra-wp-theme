@@ -30,7 +30,7 @@ add_action('wp_dashboard_setup', function() {
 			$message = '<p>You are on the <a href="https://github.com/CooperChristenson/aisd-orchestra-wp-theme/releases/latest" target="_blank" title="'.$latest_version.'">latest version</a></p>';
 		}
 		else if($installed_version >= $latest_version){
-			$message = '<p>You are on a development version</p>';
+			$message = '<p>You are on a development version. Checkout GitHub to downgrade to the <a href="https://github.com/cooperchristenson/aisd-orchestra-wp-theme/releases/latest" target="_blank" title="'.$latest_version.'"></p>';
 		}
 		else{
 			$message = '<h2 style="background-color:rgb(128, 0, 0); color:white; padding:15px;">
@@ -42,7 +42,7 @@ add_action('wp_dashboard_setup', function() {
 		}
 
 		echo '<p>Welcome to the Allen ISD Orchestra WordPress Theme</p>
-			<p>Need help? Contact the development team at:<br/><a href="mailto:cooper.j.christenson@gmail.com">cooper.j.christenson@gmail.com</a></p>
+			<p>Need help? Contact the development team at:<br/><a href="mailto:cmailto:liturgy.regency.0l@icloud.com">Cooper Christenson</a></p>
 			
 			<p>Installed theme version: <i>'.$installed_version.'</i></p>
 			'.$message;
