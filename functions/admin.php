@@ -27,7 +27,7 @@ add_action('wp_dashboard_setup', function() {
 			$message = '<p>Checking for updates failed. Please visit <a href="https://github.com/CooperChristenson/aisd-orchestra-wp-theme/"> to manually check for updates.</p>';
 		}
 		else if($installed_version == $latest_version || $installed_version=='WR_Child'){
-			$message = '<p>You are on the <a href="https://github.com/oawest/wp-theme/releases/latest" target="_blank" title="'.$latest_version.'">latest version</a></p>';
+			$message = '<p>You are on the <a href="https://github.com/CooperChristenson/aisd-orchestra-wp-theme/releases/latest" target="_blank" title="'.$latest_version.'">latest version</a></p>';
 		}
 		else if($installed_version >= $latest_version){
 			$message = '<p>You are on a development version</p>';
@@ -35,7 +35,7 @@ add_action('wp_dashboard_setup', function() {
 		else{
 			$message = '<h2 style="background-color:rgb(128, 0, 0); color:white; padding:15px;">
 					An update is available for your theme.
-					
+					<a href="https://github.com/cooperchristenson/aisd-orchestra-wp-theme/releases/latest" target="_blank" style="color: gold;text-decoration: none;">
 						Version '.$latest_version.'
 					</a>
 				</h2>';
